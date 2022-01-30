@@ -25,9 +25,9 @@
                 </ComboBox>
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
-                <Button Height="25" Width="25" Click="Button_Click">
+                <ToggleButton Height="25" Width="25" Click="Button_Click">
                     <Image Source="Data/bold.png"/>
-                </Button>
+                </ToggleButton>
                 <Separator/>
                 <Button Height="25" Width="25" Click="Button_Click_1">
                     <Image Source="Data/italics.png"/>

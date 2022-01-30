@@ -45,7 +45,14 @@ namespace WpfApp3
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            textBox.FontWeight = FontWeights.Bold;
+            if (textBox.FontWeight == FontWeights.Normal)
+            {
+                textBox.FontWeight = FontWeights.Bold;
+            }
+            else
+            {
+                textBox.FontWeight = FontWeights.Normal;
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -55,7 +62,10 @@ namespace WpfApp3
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            textBox.TextDecorations = TextDecorations.Underline;
+            if (textBox.TextDecorations.Count == 0)
+                textBox.TextDecorations.Add(TextDecorations.Underline);
+            else
+                textBox.TextDecorations.Remove(TextDecorations.Underline[0]);
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
